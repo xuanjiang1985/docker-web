@@ -1,4 +1,4 @@
-### install nginx, php, redis, mysql in docker quickly
+### install nginx, php, redis and mysql in docker quickly
 ```
 cd /root/docker-web/
 docker-composer up -d
