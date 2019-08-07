@@ -1,7 +1,7 @@
 ### install nginx, php, redis and mysql in docker quickly
 ```
 cd /root/docker-web/
-docker-composer up -d
+docker-compose up -d
 ```
 
 ### add laravel task schedule into crontab
