@@ -32,7 +32,7 @@ services:
       - "./nginx/sites-enabled:/etc/nginx/sites-enabled"
       - "../:/var/www"
       - "./log/nginx:/var/log/nginx"
-    container_name: nginx-php7.2.81
+    container_name: nginx-php7.2
     # links:
     #   - redis
     #   - mysql
