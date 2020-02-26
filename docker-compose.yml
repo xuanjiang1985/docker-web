@@ -23,14 +23,14 @@ services:
     container_name: mysql5.7
 
   nginx-php:
-    image: registry.cn-hangzhou.aliyuncs.com/zgang/nginx-php-fpm-7.2.9
+    image: registry.cn-hangzhou.aliyuncs.com/zgang/nginx-php-fpm:1.5.6
     restart: always
     ports:
       - "80:80"
       - "443:443"
     volumes:
       - "./nginx/sites-enabled:/etc/nginx/sites-enabled"
-      - "../:/var/www"
+      - "./www:/var/www"
       - "./log/nginx:/var/log/nginx"
     container_name: nginx-php7.2
     # links:
