@@ -1,1 +1,0 @@
-mysql data stored dir
