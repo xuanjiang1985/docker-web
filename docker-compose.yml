@@ -10,6 +10,7 @@ services:
       - "./redis/conf/redis.conf:/usr/local/etc/redis/redis.conf"
       - "./redis/data:/data"
     container_name: redis3.2
+    command: redis-server --requirepass youpassword1
 
   mysql:
     image: mysql/mysql-server:5.7
