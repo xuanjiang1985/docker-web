@@ -38,3 +38,9 @@ services:
     #   - redis
     #   - mysql
     working_dir: /var/www 
+    command:
+      - /bin/sh
+      - -c
+      - |
+        echo "* * * * * /usr/local/bin/php /var/www/laravel-5-5-app/artisan schedule:run >> /tmp/cron.log" >> /etc/crontabs/root && crond restart
+        /start.sh

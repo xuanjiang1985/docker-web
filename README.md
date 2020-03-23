@@ -6,10 +6,11 @@ docker-compose up -d
 
 ### add laravel task schedule into crontab
 ```
-crontab -e
-* * * * * docker exec nginx-php7.2 /var/www/timer/laravel.sh >> /tmp/error.log
+// added a commend in the docker-compose.yaml
+command:
+      - /bin/sh
+      - -c
+      - |
+        echo "* * * * * /usr/local/bin/php /var/www/laravel-5-5-app/artisan schedule:run >> /tmp/cron.log" >> /etc/crontabs/root && crond restart
+        /start.sh
 ```
-
-### is that cron working?
-`tail -f /var/log/cron`
-
